@@ -18,9 +18,12 @@
   <h2 id="status">正在取得位置中...</h2>
 
   <script>
+    // ⚠️ 老闆注意：請把下面這行換成你最新部署的 Google Apps Script 網址！
+    const GAS_URL = "https://script.google.com/macros/s/AKfycbzfm1vbwRTbBtwfJKYdJMRk814gvNsNMsvtyvIz9m9L7ALQp0CWCErFI7un7kmfh5id/exec"; // 例如: "https://script.google.com/macros/s/AKfycby.../exec"
+    
     // 固定的安全檢查金鑰
     const SECRET_KEY = "XuanBossSuperSecretKey2026";
-    // ⚠️ 老闆注意：這裡要填入你之前設定在 Netlify 的那個 LIFF ID (通常是 201xxxxxxx-xxxxxxx 格式)
+    // ⚠️ 老闆注意：這裡要填入你在 LINE Developers 後台的 LIFF ID
     const MY_LIFF_ID = "2010329159-Q4GS3m0W"; 
 
     liff.init({ liffId: MY_LIFF_ID }).then(() => {
@@ -29,7 +32,6 @@
         return;
       }
       
-      // 取得網址列動作 (上班或下班)
       const action = new URLSearchParams(window.location.search).get('action') === 'out' ? "下班" : "上班";
       
       navigator.geolocation.getCurrentPosition(async (pos) => {
@@ -37,11 +39,10 @@
         let lng = pos.coords.longitude.toFixed(5);
         let ts = new Date().getTime();
         
-        // 計算安全雜湊碼
         let hash = await computeSHA256(action + lat + lng + ts + SECRET_KEY);
         let hashStr = hash.substring(0, 8);
         
-        // 🚀 最關鍵的一步：直接傳送文字訊息到聊天室
+        // 🚀 把定位資訊和打卡文字，透過 LINE 傳出去
         liff.sendMessages([{
           type: 'text',
           text: `【${action}打卡】,緯度:${lat},經度:${lng},時間:${ts},碼:${hashStr}`
@@ -57,7 +58,6 @@
       }, { enableHighAccuracy: true });
     });
 
-    // 安全加密運算
     async function computeSHA256(text) {
       const msgUint8 = new TextEncoder().encode(text);
       const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
