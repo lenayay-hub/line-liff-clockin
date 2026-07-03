@@ -20,8 +20,10 @@
   <script>
     // 固定的安全檢查金鑰
     const SECRET_KEY = "XuanBossSuperSecretKey2026";
+    // ⚠️ 老闆注意：這裡要填入你之前設定在 Netlify 的那個 LIFF ID (通常是 201xxxxxxx-xxxxxxx 格式)
+    const MY_LIFF_ID = "2010329159-Q4GS3m0W"; 
 
-    liff.init({ liffId: "2010329159-Q4GS3m0W" }).then(() => {
+    liff.init({ liffId: MY_LIFF_ID }).then(() => {
       if (!liff.isLoggedIn()) {
         liff.login();
         return;
@@ -40,7 +42,6 @@
         let hashStr = hash.substring(0, 8);
         
         // 🚀 最關鍵的一步：直接傳送文字訊息到聊天室
-        // LINE 機器人收到這串文字後，會自動在後端處理距離驗證與寫入
         liff.sendMessages([{
           type: 'text',
           text: `【${action}打卡】,緯度:${lat},經度:${lng},時間:${ts},碼:${hashStr}`
