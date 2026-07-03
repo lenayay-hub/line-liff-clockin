@@ -1,452 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299.77">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #1443ae; -webkit-text-stroke: #1443ae}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #12737e; -webkit-text-stroke: #12737e}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #a20010; -webkit-text-stroke: #a20010}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #2e3133; -webkit-text-stroke: #2e3133}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #2e3133; -webkit-text-stroke: #2e3133; min-height: 15.0px}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #6103ad; -webkit-text-stroke: #6103ad}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #137646; -webkit-text-stroke: #137646}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #2e3133; -webkit-text-stroke: #000000}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #2e3133; -webkit-text-stroke: #a20010}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #4d5055; -webkit-text-stroke: #4d5055}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #2e3133; -webkit-text-stroke: #ba0673}
-    span.s1 {font-kerning: none; background-color: #f6f7f9}
-    span.s2 {font-kerning: none; color: #fb0007; background-color: #f6f7f9; -webkit-text-stroke: 0px #fb0007}
-    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #f6f7f9; -webkit-text-stroke: 0px #2a2a2a}
-    span.s4 {font-kerning: none; color: #2e3133; background-color: #f6f7f9; -webkit-text-stroke: 0px #2e3133}
-    span.s5 {font-kerning: none; color: #1443ae; background-color: #f6f7f9; -webkit-text-stroke: 0px #1443ae}
-    span.s6 {font-kerning: none; color: #a20010; background-color: #f6f7f9; -webkit-text-stroke: 0px #a20010}
-    span.s7 {font-kerning: none; color: #12737e; background-color: #f6f7f9; -webkit-text-stroke: 0px #12737e}
-    span.s8 {font-kerning: none; color: #6103ad; background-color: #f6f7f9; -webkit-text-stroke: 0px #6103ad}
-    span.s9 {font-kerning: none; color: #093c94; background-color: #f6f7f9; -webkit-text-stroke: 0px #093c94}
-    span.s10 {font-kerning: none; color: #137646; background-color: #f6f7f9; -webkit-text-stroke: 0px #137646}
-    span.s11 {font-kerning: none}
-    span.s12 {font-kerning: none; background-color: #f6f7f9; -webkit-text-stroke: 0px #2e3133}
-    span.s13 {font-kerning: none; color: #ba0673; background-color: #f6f7f9; -webkit-text-stroke: 0px #ba0673}
-    span.s14 {font-kerning: none; background-color: #f6f7f9; -webkit-text-stroke: 0px #000000}
-    span.s15 {font-kerning: none; color: #a20010; background-color: #f6f7f9}
-    span.s16 {font-kerning: none; color: #2e3133; background-color: #f6f7f9; -webkit-text-stroke: 0px #000000}
-    span.s17 {font-kerning: none; color: #ba0673; background-color: #f6f7f9}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>百麒打卡中...</title>
+  <!-- 載入 LINE LIFF SDK -->
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-align: center; padding-top: 60px; background-color: #f4f6f9; color: #333; }
+    .loader { border: 8px solid #f3f3f3; border-top: 8px solid #3b82f6; border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; margin: 0 auto; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    h2 { color: #1e3a8a; margin-top: 30px; font-size: 20px; }
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">html</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s6">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">meta</span><span class="s4"> </span><span class="s7">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s7">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">title</span><span class="s3">&gt;</span><span class="s1">LINE LIFF 智慧範圍打卡系統</span><span class="s3">&lt;/</span><span class="s5">title</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">script</span><span class="s4"> </span><span class="s7">src</span><span class="s3">=</span><span class="s1">"https://static.line-scdn.net/liff/edge/2/sdk.js"</span><span class="s3">&gt;&lt;/</span><span class="s5">script</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">script</span><span class="s4"> </span><span class="s7">src</span><span class="s3">=</span><span class="s1">"https://unpkg.com/vconsole@latest/dist/vconsole.min.js"</span><span class="s3">&gt;&lt;/</span><span class="s5">script</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s8">body</span><span class="s1"> {</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s7">font-family:</span><span class="s4"> </span><span class="s1">-apple-system</span><span class="s4">, </span><span class="s1">BlinkMacSystemFont</span><span class="s4">, </span><span class="s1">"Segoe UI"</span><span class="s4">, </span><span class="s1">Roboto</span><span class="s4">, </span><span class="s1">Helvetica</span><span class="s4">, </span><span class="s1">Arial</span><span class="s4">, </span><span class="s1">sans-serif</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#f4f7f6</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">margin:</span><span class="s1"> </span><span class="s10">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">padding:</span><span class="s1"> </span><span class="s10">15px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">color:</span><span class="s1"> </span><span class="s9">#333</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">box-sizing:</span><span class="s4"> </span><span class="s6">border-box</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.container</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">max-width:</span><span class="s4"> </span><span class="s10">480px</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">margin:</span><span class="s1"> </span><span class="s10">10px</span><span class="s1"> </span><span class="s6">auto</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background:</span><span class="s4"> </span><span class="s9">#ffffff</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s10">16px</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">padding:</span><span class="s1"> </span><span class="s10">25px</span><span class="s1"> </span><span class="s10">20px</span><span class="s1">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s7">box-shadow:</span><span class="s4"> </span><span class="s1">0</span><span class="s4"> </span><span class="s1">4px</span><span class="s4"> </span><span class="s1">20px</span><span class="s4"> </span><span class="s6">rgba(</span><span class="s1">0</span><span class="s4">,</span><span class="s1">0</span><span class="s4">,</span><span class="s1">0</span><span class="s4">,</span><span class="s1">0.06</span><span class="s6">)</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">box-sizing:</span><span class="s4"> </span><span class="s6">border-box</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.header</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">text-align:</span><span class="s4"> </span><span class="s6">center</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">margin-bottom:</span><span class="s4"> </span><span class="s10">25px</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.header</span><span class="s4"> </span><span class="s1">h2</span><span class="s4"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">color:</span><span class="s1"> </span><span class="s9">#06C755</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">margin:</span><span class="s1"> </span><span class="s10">0</span><span class="s1"> </span><span class="s10">0</span><span class="s1"> </span><span class="s10">8px</span><span class="s1"> </span><span class="s10">0</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s10">24px</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">letter-spacing:</span><span class="s4"> </span><span class="s10">1px</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.header</span><span class="s4"> </span><span class="s1">p</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s10">13px</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">color:</span><span class="s1"> </span><span class="s9">#777</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">margin:</span><span class="s1"> </span><span class="s10">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.form-group</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">margin-bottom:</span><span class="s4"> </span><span class="s10">18px</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s8">label</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">display:</span><span class="s1"> </span><span class="s6">block</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-weight:</span><span class="s4"> </span><span class="s10">600</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s10">14px</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">margin-bottom:</span><span class="s4"> </span><span class="s10">8px</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">color:</span><span class="s1"> </span><span class="s9">#444</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s8">select</span><span class="s1">, </span><span class="s8">input</span><span class="s1">[</span><span class="s6">type</span><span class="s1">=</span><span class="s6">"text"</span><span class="s1">] {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">width:</span><span class="s1"> </span><span class="s10">100%</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">padding:</span><span class="s1"> </span><span class="s10">13px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">border:</span><span class="s1"> </span><span class="s10">1px</span><span class="s1"> </span><span class="s6">solid</span><span class="s1"> </span><span class="s9">#ddd</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s10">10px</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s10">16px</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">box-sizing:</span><span class="s4"> </span><span class="s6">border-box</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#fff</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">color:</span><span class="s1"> </span><span class="s9">#333</span><span class="s1">;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s7">transition:</span><span class="s4"> </span><span class="s1">border-color</span><span class="s4"> </span><span class="s10">0.2s</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">select:focus</span><span class="s4">, </span><span class="s1">input</span><span class="s4">[</span><span class="s6">type</span><span class="s4">=</span><span class="s6">"text"</span><span class="s4">]</span><span class="s1">:focus</span><span class="s4"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">outline:</span><span class="s1"> </span><span class="s6">none</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-color:</span><span class="s4"> </span><span class="s9">#06C755</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s8">input</span><span class="s1">[</span><span class="s6">readonly</span><span class="s1">] {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#f9f9f9</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">color:</span><span class="s1"> </span><span class="s9">#666</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">border:</span><span class="s1"> </span><span class="s10">1px</span><span class="s1"> </span><span class="s6">solid</span><span class="s1"> </span><span class="s9">#eaeaea</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.btn-group</span><span class="s4"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">display:</span><span class="s1"> </span><span class="s6">flex</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">gap:</span><span class="s1"> </span><span class="s10">12px</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">margin-top:</span><span class="s4"> </span><span class="s10">25px</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s8">button</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">flex:</span><span class="s1"> </span><span class="s10">1</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">padding:</span><span class="s1"> </span><span class="s10">15px</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s10">16px</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-weight:</span><span class="s4"> </span><span class="s6">bold</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">border:</span><span class="s1"> </span><span class="s6">none</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s10">10px</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">cursor:</span><span class="s1"> </span><span class="s6">pointer</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">color:</span><span class="s1"> </span><span class="s6">white</span><span class="s1">;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s7">transition:</span><span class="s4"> </span><span class="s1">background</span><span class="s4"> </span><span class="s10">0.2s</span><span class="s4">, </span><span class="s1">transform</span><span class="s4"> </span><span class="s10">0.1s</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button:active</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">transform:</span><span class="s4"> </span><span class="s6">scale(</span><span class="s10">0.98</span><span class="s6">)</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.btn-work</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#06C755</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s8">.btn-work:hover</span><span class="s4"> { </span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#05b34c</span><span class="s4">; }</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.btn-off</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#f44336</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s8">.btn-off:hover</span><span class="s4"> { </span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#e53935</span><span class="s4">; }</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.btn-bind</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#007bff</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">width:</span><span class="s1"> </span><span class="s10">100%</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">button:disabled</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#cccccc</span><span class="s4"> </span><span class="s5">!important</span><span class="s4">;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s7">cursor:</span><span class="s4"> </span><span class="s1">not-allowed</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">.status-box</span><span class="s4"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">margin-top:</span><span class="s4"> </span><span class="s10">15px</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">padding:</span><span class="s1"> </span><span class="s10">12px</span><span class="s1">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s4"> </span><span class="s10">8px</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">font-size:</span><span class="s4"> </span><span class="s10">14px</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s1">text-align:</span><span class="s4"> </span><span class="s6">center</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s7">display:</span><span class="s1"> </span><span class="s6">none</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s8">.status-loading</span><span class="s4"> { </span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#e3f2fd</span><span class="s4">; </span><span class="s1">color:</span><span class="s4"> </span><span class="s9">#0d47a1</span><span class="s4">; }</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s8">.status-success</span><span class="s4"> { </span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#e8f5e9</span><span class="s4">; </span><span class="s1">color:</span><span class="s4"> </span><span class="s9">#1b5e20</span><span class="s4">; }</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s8">.status-error</span><span class="s4"> { </span><span class="s1">background-color:</span><span class="s4"> </span><span class="s9">#ffebee</span><span class="s4">; </span><span class="s1">color:</span><span class="s4"> </span><span class="s9">#c62828</span><span class="s4">; }</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">#bindSection</span><span class="s4"> { </span><span class="s7">display:</span><span class="s4"> </span><span class="s6">none</span><span class="s4">; }</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">#clockSection</span><span class="s4"> { </span><span class="s7">display:</span><span class="s4"> </span><span class="s6">none</span><span class="s4">; }</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"container"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"header"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">h2</span><span class="s3">&gt;</span><span class="s1">⏰ 智慧打卡系統</span><span class="s3">&lt;/</span><span class="s5">h2</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">p</span><span class="s1"> </span><span class="s7">id</span><span class="s3">=</span><span class="s6">"liffStatus"</span><span class="s3">&gt;</span><span class="s1">正在透過 LINE 安全通道建立連線...</span><span class="s3">&lt;/</span><span class="s5">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s7">id</span><span class="s3">=</span><span class="s1">"statusBox"</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"status-box"</span><span class="s3">&gt;&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"form-group"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">label</span><span class="s1"> </span><span class="s7">for</span><span class="s3">=</span><span class="s6">"nameSelect"</span><span class="s3">&gt;</span><span class="s1">👤 同仁姓名</span><span class="s3">&lt;/</span><span class="s5">label</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">select</span><span class="s4"> </span><span class="s7">id</span><span class="s3">=</span><span class="s1">"nameSelect"</span><span class="s4"> </span><span class="s7">onchange</span><span class="s3">=</span><span class="s1">"autoFillEmployeeInfo()"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s5">option</span><span class="s1"> </span><span class="s7">value</span><span class="s3">=</span><span class="s6">""</span><span class="s3">&gt;</span><span class="s1">正在載入名單...</span><span class="s3">&lt;/</span><span class="s5">option</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;/</span><span class="s5">select</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"form-group"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">label</span><span class="s1"> </span><span class="s7">for</span><span class="s3">=</span><span class="s6">"deptInput"</span><span class="s3">&gt;</span><span class="s1">🏢 所屬部門</span><span class="s3">&lt;/</span><span class="s5">label</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">input</span><span class="s4"> </span><span class="s7">type</span><span class="s3">=</span><span class="s1">"text"</span><span class="s4"> </span><span class="s7">id</span><span class="s3">=</span><span class="s1">"deptInput"</span><span class="s4"> </span><span class="s7">placeholder</span><span class="s3">=</span><span class="s1">"選擇姓名後自動帶出"</span><span class="s4"> </span><span class="s7">readonly</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"form-group"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">label</span><span class="s4"> </span><span class="s7">for</span><span class="s3">=</span><span class="s1">"salaryTypeInput"</span><span class="s3">&gt;</span><span class="s4">💰 薪資型態</span><span class="s3">&lt;/</span><span class="s5">label</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">input</span><span class="s4"> </span><span class="s7">type</span><span class="s3">=</span><span class="s1">"text"</span><span class="s4"> </span><span class="s7">id</span><span class="s3">=</span><span class="s1">"salaryTypeInput"</span><span class="s4"> </span><span class="s7">placeholder</span><span class="s3">=</span><span class="s1">"選擇姓名後自動帶出"</span><span class="s4"> </span><span class="s7">readonly</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s7">id</span><span class="s3">=</span><span class="s1">"bindSection"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">button</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"btn-bind"</span><span class="s4"> </span><span class="s7">id</span><span class="s3">=</span><span class="s1">"bindBtn"</span><span class="s4"> </span><span class="s7">onclick</span><span class="s3">=</span><span class="s1">"submitBinding()"</span><span class="s3">&gt;</span><span class="s4">確認綁定此 LINE 帳號</span><span class="s3">&lt;/</span><span class="s5">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s7">id</span><span class="s3">=</span><span class="s1">"clockSection"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"form-group"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s5">label</span><span class="s1"> </span><span class="s7">for</span><span class="s3">=</span><span class="s6">"noteInput"</span><span class="s3">&gt;</span><span class="s1">✍️ 打卡備註 (選填)</span><span class="s3">&lt;/</span><span class="s5">label</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s5">input</span><span class="s4"> </span><span class="s7">type</span><span class="s3">=</span><span class="s1">"text"</span><span class="s4"> </span><span class="s7">id</span><span class="s3">=</span><span class="s1">"noteInput"</span><span class="s4"> </span><span class="s7">placeholder</span><span class="s3">=</span><span class="s1">"有特殊狀況請在此註明..."</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;</span><span class="s5">div</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"btn-group"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s5">button</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"btn-work"</span><span class="s4"> </span><span class="s7">id</span><span class="s3">=</span><span class="s1">"btnIn"</span><span class="s4"> </span><span class="s7">onclick</span><span class="s3">=</span><span class="s1">"startClockProcess('上班')"</span><span class="s3">&gt;</span><span class="s4">☀️ 上班打卡</span><span class="s3">&lt;/</span><span class="s5">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s5">button</span><span class="s4"> </span><span class="s7">class</span><span class="s3">=</span><span class="s1">"btn-off"</span><span class="s4"> </span><span class="s7">id</span><span class="s3">=</span><span class="s1">"btnOut"</span><span class="s4"> </span><span class="s7">onclick</span><span class="s3">=</span><span class="s1">"startClockProcess('下班')"</span><span class="s3">&gt;</span><span class="s4">🌙 下班打卡</span><span class="s3">&lt;/</span><span class="s5">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s5">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;/</span><span class="s1">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s1">window</span><span class="s12">.</span><span class="s1">vConsole</span><span class="s12"> = </span><span class="s5">new</span><span class="s12"> </span><span class="s1">window</span><span class="s12">.</span><span class="s13">VConsole</span><span class="s12">();</span></p>
-<p class="p10"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s14">console</span><span class="s12">.</span><span class="s14">log</span><span class="s12">(</span><span class="s15">"📸 vConsole 啟動！"</span><span class="s12">);</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p11"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// ==========================================</span></p>
-<p class="p11"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// ⚠️ 關鍵填入：</span></p>
-<p class="p11"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// 1. 你的 LINE LIFF ID</span></p>
-<p class="p11"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// 2. 剛剛第一步部署完獲得的 GAS 網頁應用程式網址 (結尾必須是 /exec)</span></p>
-<p class="p11"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// ==========================================</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">const</span><span class="s4"> </span><span class="s13">MY_LIFF_ID</span><span class="s4"> = </span><span class="s1">'2010271306-bjI5SC09'</span><span class="s4">;<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s5">const</span><span class="s4"> </span><span class="s13">GAS_API_URL</span><span class="s4"> = </span><span class="s1">'https://script.google.com/macros/s/AKfycbwsfDTBlKMjF1FgX_PRLKXnNDgZQtjcjKqY25aDLkpUtp6BuZwg3qWsmzD9vImOFHyq/exec'</span><span class="s4">;<span class="Apple-converted-space"> </span></span></p>
-<p class="p11"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// ==========================================</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">var</span><span class="s12"> </span><span class="s1">globalLineUserId</span><span class="s12"> = </span><span class="s6">""</span><span class="s12">;<span class="Apple-converted-space"> </span></span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">var</span><span class="s12"> </span><span class="s1">cachedUnboundList</span><span class="s12"> = [];<span class="Apple-converted-space"> </span></span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p11"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">// 通用網路要求傳輸大腦：避開 CORS 預檢限制</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">function</span><span class="s12"> </span><span class="s1">callGasApi</span><span class="s12">(</span><span class="s1">action</span><span class="s12">, </span><span class="s1">payload</span><span class="s12">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">console</span><span class="s12">.</span><span class="s1">log</span><span class="s12">(</span><span class="s6">`📡 發送 API 請求 -&gt; 指令: </span><span class="s12">${</span><span class="s1">action</span><span class="s12">}</span><span class="s6">`</span><span class="s12">, </span><span class="s1">payload</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s5">return</span><span class="s1"> </span><span class="s14">fetch</span><span class="s1">(</span><span class="s13">GAS_API_URL</span><span class="s1">, {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s14">method</span><span class="s1">: </span><span class="s6">"POST"</span><span class="s1">,</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">body</span><span class="s12">: </span><span class="s13">JSON</span><span class="s12">.</span><span class="s1">stringify</span><span class="s12">({ </span><span class="s1">action</span><span class="s12">: </span><span class="s1">action</span><span class="s12">, ...</span><span class="s1">payload</span><span class="s12"> }),</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s16">headers</span><span class="s4">: { </span><span class="s1">"Content-Type"</span><span class="s4">: </span><span class="s1">"text/plain"</span><span class="s4"> }<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>})</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>.</span><span class="s14">then</span><span class="s1">(</span><span class="s14">res</span><span class="s1"> =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">if</span><span class="s1"> (!</span><span class="s14">res</span><span class="s1">.</span><span class="s14">ok</span><span class="s1">) </span><span class="s5">throw</span><span class="s1"> </span><span class="s5">new</span><span class="s1"> </span><span class="s13">Error</span><span class="s1">(</span><span class="s6">"網路連線異常，伺服器無回應"</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">return</span><span class="s1"> </span><span class="s14">res</span><span class="s1">.</span><span class="s14">json</span><span class="s1">();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">addEventListener</span><span class="s12">(</span><span class="s6">"DOMContentLoaded"</span><span class="s12">, </span><span class="s5">function</span><span class="s12">() {</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s16">showStatus</span><span class="s4">(</span><span class="s1">"正在初始化 LINE 安全通道..."</span><span class="s4">, </span><span class="s1">"loading"</span><span class="s4">);</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s14">liff</span><span class="s1">.</span><span class="s14">init</span><span class="s1">({ </span><span class="s14">liffId</span><span class="s1">: </span><span class="s13">MY_LIFF_ID</span><span class="s1"> })</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>.</span><span class="s14">then</span><span class="s1">(() =&gt; {</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">          </span></span><span class="s16">console</span><span class="s4">.</span><span class="s16">log</span><span class="s4">(</span><span class="s1">"✅ LIFF SDK 在獨立網頁環境下順利啟動！"</span><span class="s4">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s5">if</span><span class="s1"> (!</span><span class="s14">liff</span><span class="s1">.</span><span class="s14">isLoggedIn</span><span class="s1">()) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s14">liff</span><span class="s1">.</span><span class="s14">login</span><span class="s1">();<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span>} </span><span class="s5">else</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">return</span><span class="s1"> </span><span class="s14">liff</span><span class="s1">.</span><span class="s14">getProfile</span><span class="s1">();<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>})</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>.</span><span class="s14">then</span><span class="s1">((</span><span class="s14">profile</span><span class="s1">) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s5">if</span><span class="s1"> (!</span><span class="s14">profile</span><span class="s1">) </span><span class="s5">return</span><span class="s1">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s1">globalLineUserId</span><span class="s12"> = </span><span class="s1">profile</span><span class="s12">.</span><span class="s1">userId</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s1">console</span><span class="s12">.</span><span class="s1">log</span><span class="s12">(</span><span class="s6">"👤 成功取得 LINE UID:"</span><span class="s12">, </span><span class="s1">globalLineUserId</span><span class="s12">);</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">          </span></span></p>
-<p class="p10"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s14">document</span><span class="s12">.</span><span class="s14">getElementById</span><span class="s12">(</span><span class="s15">"liffStatus"</span><span class="s12">).</span><span class="s14">innerText</span><span class="s12"> = </span><span class="s15">"LINE 驗證成功，正在檢查綁定狀態..."</span><span class="s12">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">          </span></span></p>
-<p class="p11"><span class="s4"><span class="Apple-converted-space">          </span></span><span class="s1">// 改用 fetch 呼叫後端 API</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s5">return</span><span class="s12"> </span><span class="s1">callGasApi</span><span class="s12">(</span><span class="s6">"checkLineBinding"</span><span class="s12">, { </span><span class="s1">lineUserId</span><span class="s12">: </span><span class="s1">globalLineUserId</span><span class="s12"> });</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>})</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span>.</span><span class="s1">then</span><span class="s12">(</span><span class="s1">handleBindingResult</span><span class="s12">)</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>.</span><span class="s5">catch</span><span class="s1">((</span><span class="s14">err</span><span class="s1">) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s14">console</span><span class="s1">.</span><span class="s14">error</span><span class="s1">(</span><span class="s6">"💥 核心管道錯誤:"</span><span class="s1">, </span><span class="s14">err</span><span class="s1">);</span></p>
-<p class="p10"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s14">showStatus</span><span class="s12">(</span><span class="s15">"核心連線失敗，請檢查網路或系統設定。錯誤訊號: "</span><span class="s12"> + </span><span class="s14">err</span><span class="s12">.</span><span class="s14">message</span><span class="s12">, </span><span class="s15">"error"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"liffStatus"</span><span class="s12">).</span><span class="s1">innerText</span><span class="s12"> = </span><span class="s6">"連線建立失敗。"</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">function</span><span class="s12"> </span><span class="s1">handleBindingResult</span><span class="s12">(</span><span class="s1">result</span><span class="s12">) {</span></p>
-<p class="p10"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s14">console</span><span class="s12">.</span><span class="s14">log</span><span class="s12">(</span><span class="s15">"📥 成功接收後端回傳封包:"</span><span class="s12">, </span><span class="s14">result</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s5">if</span><span class="s1"> (!</span><span class="s14">result</span><span class="s1">.</span><span class="s14">success</span><span class="s1">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">showStatus</span><span class="s12">(</span><span class="s6">"資料庫通道故障: "</span><span class="s12"> + </span><span class="s1">result</span><span class="s12">.</span><span class="s1">message</span><span class="s12">, </span><span class="s6">"error"</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">hideStatus</span><span class="s12">();</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s5">const</span><span class="s12"> </span><span class="s1">nameSelect</span><span class="s12"> = </span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"nameSelect"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">nameSelect</span><span class="s12">.</span><span class="s1">innerHTML</span><span class="s12"> = </span><span class="s6">""</span><span class="s12">;<span class="Apple-converted-space"> </span></span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s5">if</span><span class="s12"> (</span><span class="s1">result</span><span class="s12">.</span><span class="s1">isBound</span><span class="s12">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"liffStatus"</span><span class="s12">).</span><span class="s1">innerText</span><span class="s12"> = </span><span class="s6">`員工連線成功！歡迎回來，</span><span class="s12">${</span><span class="s1">result</span><span class="s12">.</span><span class="s1">name</span><span class="s12">}</span><span class="s6"> 👋`</span><span class="s12">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s5">let</span><span class="s12"> </span><span class="s1">option</span><span class="s12"> = </span><span class="s1">document</span><span class="s12">.</span><span class="s1">createElement</span><span class="s12">(</span><span class="s6">"option"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">option</span><span class="s12">.</span><span class="s1">value</span><span class="s12"> = </span><span class="s1">result</span><span class="s12">.</span><span class="s1">name</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">option</span><span class="s12">.</span><span class="s1">text</span><span class="s12"> = </span><span class="s1">result</span><span class="s12">.</span><span class="s1">name</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">nameSelect</span><span class="s12">.</span><span class="s1">appendChild</span><span class="s12">(</span><span class="s1">option</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">nameSelect</span><span class="s12">.</span><span class="s1">disabled</span><span class="s12"> = </span><span class="s5">true</span><span class="s12">;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"deptInput"</span><span class="s12">).</span><span class="s1">value</span><span class="s12"> = </span><span class="s1">result</span><span class="s12">.</span><span class="s1">department</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"salaryTypeInput"</span><span class="s12">).</span><span class="s1">value</span><span class="s12"> = </span><span class="s1">result</span><span class="s12">.</span><span class="s1">salaryType</span><span class="s12">;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"clockSection"</span><span class="s12">).</span><span class="s1">style</span><span class="s12">.</span><span class="s1">display</span><span class="s12"> = </span><span class="s6">"block"</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"bindSection"</span><span class="s12">).</span><span class="s1">style</span><span class="s12">.</span><span class="s1">display</span><span class="s12"> = </span><span class="s6">"none"</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>} </span><span class="s5">else</span><span class="s1"> {</span></p>
-<p class="p10"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s14">document</span><span class="s12">.</span><span class="s14">getElementById</span><span class="s12">(</span><span class="s15">"liffStatus"</span><span class="s12">).</span><span class="s14">innerText</span><span class="s12"> = </span><span class="s15">"偵測到新裝置！請選擇您的姓名進行帳號綁定。"</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">cachedUnboundList</span><span class="s12"> = </span><span class="s1">result</span><span class="s12">.</span><span class="s1">unboundList</span><span class="s12">;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s5">if</span><span class="s12"> (!</span><span class="s1">cachedUnboundList</span><span class="s12"> || </span><span class="s1">cachedUnboundList</span><span class="s12">.</span><span class="s1">length</span><span class="s12"> === </span><span class="s7">0</span><span class="s12">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s5">let</span><span class="s12"> </span><span class="s1">option</span><span class="s12"> = </span><span class="s1">document</span><span class="s12">.</span><span class="s1">createElement</span><span class="s12">(</span><span class="s6">"option"</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s14">option</span><span class="s1">.</span><span class="s14">value</span><span class="s1"> = </span><span class="s6">""</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s14">option</span><span class="s1">.</span><span class="s14">text</span><span class="s1"> = </span><span class="s6">"目前沒有未綁定的員工名單"</span><span class="s1">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s1">nameSelect</span><span class="s12">.</span><span class="s1">appendChild</span><span class="s12">(</span><span class="s1">option</span><span class="s12">);</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">          </span></span><span class="s16">showStatus</span><span class="s4">(</span><span class="s1">"後端無未綁定同仁名單，請管理員確認試算表資訊。"</span><span class="s4">, </span><span class="s1">"error"</span><span class="s4">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s5">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s5">let</span><span class="s12"> </span><span class="s1">defaultOption</span><span class="s12"> = </span><span class="s1">document</span><span class="s12">.</span><span class="s1">createElement</span><span class="s12">(</span><span class="s6">"option"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">defaultOption</span><span class="s12">.</span><span class="s1">value</span><span class="s12"> = </span><span class="s6">""</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">defaultOption</span><span class="s12">.</span><span class="s1">text</span><span class="s12"> = </span><span class="s6">"-- 請選擇您的姓名 --"</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">nameSelect</span><span class="s12">.</span><span class="s1">appendChild</span><span class="s12">(</span><span class="s1">defaultOption</span><span class="s12">);</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">cachedUnboundList</span><span class="s12">.</span><span class="s1">forEach</span><span class="s12">(</span><span class="s1">emp</span><span class="s12"> =&gt; {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s5">let</span><span class="s12"> </span><span class="s1">option</span><span class="s12"> = </span><span class="s1">document</span><span class="s12">.</span><span class="s1">createElement</span><span class="s12">(</span><span class="s6">"option"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s1">option</span><span class="s12">.</span><span class="s1">value</span><span class="s12"> = </span><span class="s1">emp</span><span class="s12">.</span><span class="s1">name</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s1">option</span><span class="s12">.</span><span class="s1">text</span><span class="s12"> = </span><span class="s1">emp</span><span class="s12">.</span><span class="s1">name</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s1">nameSelect</span><span class="s12">.</span><span class="s1">appendChild</span><span class="s12">(</span><span class="s1">option</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"bindSection"</span><span class="s12">).</span><span class="s1">style</span><span class="s12">.</span><span class="s1">display</span><span class="s12"> = </span><span class="s6">"block"</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"clockSection"</span><span class="s12">).</span><span class="s1">style</span><span class="s12">.</span><span class="s1">display</span><span class="s12"> = </span><span class="s6">"none"</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">function</span><span class="s12"> </span><span class="s1">autoFillEmployeeInfo</span><span class="s12">() {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s5">const</span><span class="s12"> </span><span class="s1">selectedName</span><span class="s12"> = </span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"nameSelect"</span><span class="s12">).</span><span class="s1">value</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s5">const</span><span class="s12"> </span><span class="s1">deptInput</span><span class="s12"> = </span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"deptInput"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s5">const</span><span class="s12"> </span><span class="s1">salaryTypeInput</span><span class="s12"> = </span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"salaryTypeInput"</span><span class="s12">);</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s5">if</span><span class="s1"> (!</span><span class="s14">selectedName</span><span class="s1">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">deptInput</span><span class="s12">.</span><span class="s1">value</span><span class="s12"> = </span><span class="s6">""</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">salaryTypeInput</span><span class="s12">.</span><span class="s1">value</span><span class="s12"> = </span><span class="s6">""</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s5">const</span><span class="s12"> </span><span class="s1">emp</span><span class="s12"> = </span><span class="s1">cachedUnboundList</span><span class="s12">.</span><span class="s1">find</span><span class="s12">(</span><span class="s1">e</span><span class="s12"> =&gt; </span><span class="s1">e</span><span class="s12">.</span><span class="s1">name</span><span class="s12"> === </span><span class="s1">selectedName</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s5">if</span><span class="s1"> (</span><span class="s14">emp</span><span class="s1">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">deptInput</span><span class="s12">.</span><span class="s1">value</span><span class="s12"> = </span><span class="s1">emp</span><span class="s12">.</span><span class="s1">department</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">salaryTypeInput</span><span class="s12">.</span><span class="s1">value</span><span class="s12"> = </span><span class="s1">emp</span><span class="s12">.</span><span class="s1">salaryType</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">function</span><span class="s12"> </span><span class="s1">submitBinding</span><span class="s12">() {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s5">const</span><span class="s12"> </span><span class="s1">selectedName</span><span class="s12"> = </span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"nameSelect"</span><span class="s12">).</span><span class="s1">value</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s5">if</span><span class="s1"> (!</span><span class="s14">selectedName</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s14">alert</span><span class="s1">(</span><span class="s6">"請先選取您的姓名！"</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s16">showStatus</span><span class="s4">(</span><span class="s1">"正在寫入試算表並綁定 LINE 帳號..."</span><span class="s4">, </span><span class="s1">"loading"</span><span class="s4">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"bindBtn"</span><span class="s12">).</span><span class="s1">disabled</span><span class="s12"> = </span><span class="s5">true</span><span class="s12">;</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">callGasApi</span><span class="s12">(</span><span class="s6">"linkEmployeeLineId"</span><span class="s12">, { </span><span class="s1">name</span><span class="s12">: </span><span class="s1">selectedName</span><span class="s12">, </span><span class="s1">lineUserId</span><span class="s12">: </span><span class="s1">globalLineUserId</span><span class="s12"> })</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>.</span><span class="s14">then</span><span class="s1">(</span><span class="s14">result</span><span class="s1"> =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s5">if</span><span class="s1"> (</span><span class="s14">result</span><span class="s1">.</span><span class="s14">success</span><span class="s1">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">            </span></span><span class="s1">showStatus</span><span class="s12">(</span><span class="s1">result</span><span class="s12">.</span><span class="s1">message</span><span class="s12">, </span><span class="s6">"success"</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s14">setTimeout</span><span class="s1">(() =&gt; { </span><span class="s14">location</span><span class="s1">.</span><span class="s14">reload</span><span class="s1">(); }, </span><span class="s7">2000</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span>} </span><span class="s5">else</span><span class="s1"> {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">            </span></span><span class="s1">showStatus</span><span class="s12">(</span><span class="s1">result</span><span class="s12">.</span><span class="s1">message</span><span class="s12">, </span><span class="s6">"error"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">            </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"bindBtn"</span><span class="s12">).</span><span class="s1">disabled</span><span class="s12"> = </span><span class="s5">false</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>})</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span>.</span><span class="s5">catch</span><span class="s12">(</span><span class="s1">handleGasError</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">function</span><span class="s12"> </span><span class="s1">startClockProcess</span><span class="s12">(</span><span class="s1">clockType</span><span class="s12">) {</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">      </span></span><span class="s16">showStatus</span><span class="s4">(</span><span class="s1">"🔍 正在透過手機 GPS 獲取精確定位..."</span><span class="s4">, </span><span class="s1">"loading"</span><span class="s4">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">setClockButtonsDisabled</span><span class="s12">(</span><span class="s5">true</span><span class="s12">);</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s5">if</span><span class="s12"> (!</span><span class="s1">navigator</span><span class="s12">.</span><span class="s1">geolocation</span><span class="s12">) {</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s16">showStatus</span><span class="s4">(</span><span class="s1">"您的手機裝置不支援 GPS 定位功能。"</span><span class="s4">, </span><span class="s1">"error"</span><span class="s4">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span></span><span class="s1">setClockButtonsDisabled</span><span class="s12">(</span><span class="s5">false</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">navigator</span><span class="s12">.</span><span class="s1">geolocation</span><span class="s12">.</span><span class="s1">getCurrentPosition</span><span class="s12">(</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">function</span><span class="s1">(</span><span class="s14">position</span><span class="s1">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s5">const</span><span class="s12"> </span><span class="s1">lat</span><span class="s12"> = </span><span class="s1">position</span><span class="s12">.</span><span class="s1">coords</span><span class="s12">.</span><span class="s1">latitude</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s5">const</span><span class="s12"> </span><span class="s1">lng</span><span class="s12"> = </span><span class="s1">position</span><span class="s12">.</span><span class="s1">coords</span><span class="s12">.</span><span class="s1">longitude</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s14">console</span><span class="s1">.</span><span class="s14">log</span><span class="s1">(</span><span class="s6">`📍 定位成功: (</span><span class="s1">${</span><span class="s14">lat</span><span class="s1">}</span><span class="s6">, </span><span class="s1">${</span><span class="s14">lng</span><span class="s1">}</span><span class="s6">)`</span><span class="s1">);</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">          </span></span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">          </span></span><span class="s16">showStatus</span><span class="s4">(</span><span class="s1">`經緯度讀取成功，正在送出打卡紀錄...`</span><span class="s4">, </span><span class="s1">"loading"</span><span class="s4">);</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s5">const</span><span class="s1"> </span><span class="s14">clockPackage</span><span class="s1"> = {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">            </span></span><span class="s1">name</span><span class="s12">: </span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"nameSelect"</span><span class="s12">).</span><span class="s1">value</span><span class="s12">,</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">            </span></span><span class="s1">department</span><span class="s12">: </span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"deptInput"</span><span class="s12">).</span><span class="s1">value</span><span class="s12">,</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">            </span></span><span class="s1">type2</span><span class="s12">: </span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"salaryTypeInput"</span><span class="s12">).</span><span class="s1">value</span><span class="s12">,</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">            </span></span><span class="s1">clockType</span><span class="s12">: </span><span class="s1">clockType</span><span class="s12">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s14">lat</span><span class="s1">: </span><span class="s14">lat</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s14">lng</span><span class="s1">: </span><span class="s14">lng</span><span class="s1">,</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">            </span></span><span class="s1">note</span><span class="s12">: </span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"noteInput"</span><span class="s12">).</span><span class="s1">value</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span>};</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s1">callGasApi</span><span class="s12">(</span><span class="s6">"saveClock"</span><span class="s12">, { </span><span class="s1">data</span><span class="s12">: </span><span class="s1">clockPackage</span><span class="s12"> })</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>.</span><span class="s14">then</span><span class="s1">(</span><span class="s14">result</span><span class="s1"> =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s5">if</span><span class="s1"> (</span><span class="s14">result</span><span class="s1">.</span><span class="s14">success</span><span class="s1">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">                </span></span><span class="s1">showStatus</span><span class="s12">(</span><span class="s1">result</span><span class="s12">.</span><span class="s1">message</span><span class="s12">, </span><span class="s6">"success"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">                </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"noteInput"</span><span class="s12">).</span><span class="s1">value</span><span class="s12"> = </span><span class="s6">""</span><span class="s12">;<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">              </span>} </span><span class="s5">else</span><span class="s1"> {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">                </span></span><span class="s1">showStatus</span><span class="s12">(</span><span class="s1">result</span><span class="s12">.</span><span class="s1">message</span><span class="s12">, </span><span class="s6">"error"</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">              </span>}</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">              </span></span><span class="s1">setClockButtonsDisabled</span><span class="s12">(</span><span class="s5">false</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>})</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>.</span><span class="s5">catch</span><span class="s1">(</span><span class="s14">handleGasError</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">function</span><span class="s1">(</span><span class="s14">error</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s5">let</span><span class="s1"> </span><span class="s14">errorMsg</span><span class="s1"> = </span><span class="s6">"定位失敗："</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s5">switch</span><span class="s1">(</span><span class="s14">error</span><span class="s1">.</span><span class="s14">code</span><span class="s1">) {</span></p>
-<p class="p12"><span class="s12"><span class="Apple-converted-space">            </span></span><span class="s5">case</span><span class="s12"> </span><span class="s14">error</span><span class="s12">.</span><span class="s17">PERMISSION_DENIED</span><span class="s12">:</span></p>
-<p class="p10"><span class="s12"><span class="Apple-converted-space">              </span></span><span class="s14">errorMsg</span><span class="s12"> += </span><span class="s15">"請允許 LINE 應用程式存取您的「位置權限」。"</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s5">break</span><span class="s1">;</span></p>
-<p class="p12"><span class="s12"><span class="Apple-converted-space">            </span></span><span class="s5">case</span><span class="s12"> </span><span class="s14">error</span><span class="s12">.</span><span class="s17">POSITION_UNAVAILABLE</span><span class="s12">:</span></p>
-<p class="p10"><span class="s12"><span class="Apple-converted-space">              </span></span><span class="s14">errorMsg</span><span class="s12"> += </span><span class="s15">"無法取得位置訊號，請至通訊良好的地方重試。"</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s5">break</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">case</span><span class="s1"> </span><span class="s14">error</span><span class="s1">.</span><span class="s13">TIMEOUT</span><span class="s1">:</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s14">errorMsg</span><span class="s1"> += </span><span class="s6">"搜尋 GPS 逾時，請再試一次。"</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s5">break</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">default</span><span class="s1">:</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">              </span></span><span class="s14">errorMsg</span><span class="s1"> += </span><span class="s14">error</span><span class="s1">.</span><span class="s14">message</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s1">showStatus</span><span class="s12">(</span><span class="s1">errorMsg</span><span class="s12">, </span><span class="s6">"error"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">          </span></span><span class="s1">setClockButtonsDisabled</span><span class="s12">(</span><span class="s5">false</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>},</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">        </span>{ </span><span class="s1">enableHighAccuracy</span><span class="s12">: </span><span class="s5">true</span><span class="s12">, </span><span class="s1">timeout</span><span class="s12">: </span><span class="s7">15000</span><span class="s12">, </span><span class="s1">maximumAge</span><span class="s12">: </span><span class="s7">0</span><span class="s12"> }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span>);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">function</span><span class="s12"> </span><span class="s1">setClockButtonsDisabled</span><span class="s12">(</span><span class="s1">disabled</span><span class="s12">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"btnIn"</span><span class="s12">).</span><span class="s1">disabled</span><span class="s12"> = </span><span class="s1">disabled</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"btnOut"</span><span class="s12">).</span><span class="s1">disabled</span><span class="s12"> = </span><span class="s1">disabled</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">function</span><span class="s12"> </span><span class="s1">handleGasError</span><span class="s12">(</span><span class="s1">err</span><span class="s12">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">showStatus</span><span class="s12">(</span><span class="s6">"資料傳輸故障："</span><span class="s12"> + </span><span class="s1">err</span><span class="s12">.</span><span class="s1">toString</span><span class="s12">(), </span><span class="s6">"error"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"bindBtn"</span><span class="s12">).</span><span class="s1">disabled</span><span class="s12"> = </span><span class="s5">false</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">setClockButtonsDisabled</span><span class="s12">(</span><span class="s5">false</span><span class="s12">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">function</span><span class="s12"> </span><span class="s1">showStatus</span><span class="s12">(</span><span class="s1">msg</span><span class="s12">, </span><span class="s1">type</span><span class="s12">) {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s5">const</span><span class="s12"> </span><span class="s1">box</span><span class="s12"> = </span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"statusBox"</span><span class="s12">);</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">box</span><span class="s12">.</span><span class="s1">innerText</span><span class="s12"> = </span><span class="s1">msg</span><span class="s12">;</span></p>
-<p class="p10"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s14">box</span><span class="s12">.</span><span class="s14">className</span><span class="s12"> = </span><span class="s15">"status-box status-"</span><span class="s12"> + </span><span class="s14">type</span><span class="s12">;</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">box</span><span class="s12">.</span><span class="s1">style</span><span class="s12">.</span><span class="s1">display</span><span class="s12"> = </span><span class="s6">"block"</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p6"><span class="s11"></span><br></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">    </span></span><span class="s5">function</span><span class="s12"> </span><span class="s1">hideStatus</span><span class="s12">() {</span></p>
-<p class="p9"><span class="s12"><span class="Apple-converted-space">      </span></span><span class="s1">document</span><span class="s12">.</span><span class="s1">getElementById</span><span class="s12">(</span><span class="s6">"statusBox"</span><span class="s12">).</span><span class="s1">style</span><span class="s12">.</span><span class="s1">display</span><span class="s12"> = </span><span class="s6">"none"</span><span class="s12">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+  <div class="loader"></div>
+  <h2 id="status">正在取得位置中...</h2>
+
+  <script>
+    // 固定的安全檢查金鑰
+    const SECRET_KEY = "XuanBossSuperSecretKey2026";
+
+    liff.init({ liffId: "2010329159-Q4GS3m0W" }).then(() => {
+      if (!liff.isLoggedIn()) {
+        liff.login();
+        return;
+      }
+      
+      // 取得網址列動作 (上班或下班)
+      const action = new URLSearchParams(window.location.search).get('action') === 'out' ? "下班" : "上班";
+      
+      navigator.geolocation.getCurrentPosition(async (pos) => {
+        let lat = pos.coords.latitude.toFixed(5);
+        let lng = pos.coords.longitude.toFixed(5);
+        let ts = new Date().getTime();
+        
+        // 計算安全雜湊碼
+        let hash = await computeSHA256(action + lat + lng + ts + SECRET_KEY);
+        let hashStr = hash.substring(0, 8);
+        
+        // 🚀 最關鍵的一步：直接傳送文字訊息到聊天室
+        // LINE 機器人收到這串文字後，會自動在後端處理距離驗證與寫入
+        liff.sendMessages([{
+          type: 'text',
+          text: `【${action}打卡】,緯度:${lat},經度:${lng},時間:${ts},碼:${hashStr}`
+        }]).then(() => {
+          document.getElementById('status').innerText = "✅ 打卡指令已發送！";
+          liff.closeWindow();
+        }).catch(err => {
+          alert("發送失敗: " + err);
+        });
+        
+      }, (err) => {
+        alert("無法獲取 GPS 定位，請確認權限已開啟！");
+      }, { enableHighAccuracy: true });
+    });
+
+    // 安全加密運算
+    async function computeSHA256(text) {
+      const msgUint8 = new TextEncoder().encode(text);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+  </script>
 </body>
 </html>
